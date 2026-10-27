@@ -2,7 +2,6 @@
 .terraform/
 *.tfstate
 *.tfstate.*
-.terraform.lock.hcl
 
 # Crash and debug logs
 crash.log
@@ -17,6 +16,9 @@ override.tf.json
 # CLI configuration files
 .terraformrc
 terraform.rc
+
+# Generated local files
+project-info.txt
 
 # OS / editor files
 .DS_Store
