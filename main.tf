@@ -11,11 +11,8 @@ terraform {
 
 provider "local" {}
 
-locals {
-  project_name = "terraform-infrastructure-lab-${var.environment}"
-}
+module "project_info" {
+  source = "./modules/project_info"
 
-resource "local_file" "project_info" {
-  content  = "Project: ${local.project_name}\nManaged by Terraform\n"
-  filename = "${path.module}/project-info.txt"
+  environment = var.environment
 }
